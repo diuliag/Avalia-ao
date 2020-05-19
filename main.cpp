@@ -80,7 +80,31 @@ int main()
         scoreP = 10;
     }
 
+    else if (compras == 0) {
+
+        scoreP = 0;
+    }
+
     cout << "Score de inadimplencia = " << scoreI << " pontos" << endl;
     cout << "Score de pagamento = " << scoreP << " pontos" << endl;
+
+    int scoreTotal;
+
+    scoreTotal = scoreP + scoreI + score;
+
+    if (scoreTotal > 0 && scoreTotal <= 25) {
+
+        cout << "Classificacao final = CLIENTE BRONZE" << endl;
+    }
+
+    else if (scoreTotal > 25 && scoreTotal <= 75) {
+
+        cout << "Classificacao final = CLIENTE PRATA" << endl;
+    }
+
+    else if (scoreTotal > 75) {
+
+        cout << "Classificacao final = CLIENTE OURO" << endl;
+    }
     return 0;
 }
