@@ -25,5 +25,33 @@ int main()
     cin >> tempoDePagamento;
     cout << "A maioria das compras foi em dinheiro, cartao, ou boleto (D/C/B)? ";
     cin >> formaDePagamento;
+
+
+    int score;
+
+    if (compras == 0 ) {
+
+        score = 0;
+    }
+
+    else if (compras == 2 && ticket <= 3000) {
+
+        score = 20;
+    }
+
+    else if (compras > 2 && ticket <= 3000) {
+
+        score = 40;
+    }
+
+    else if (ticket > 3000) {
+
+        score = 60;
+    }
+
+    cout << "Score de volume de compras = " << score << " pontos";
+
+
+
     return 0;
 }
