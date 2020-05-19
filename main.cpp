@@ -49,9 +49,38 @@ int main()
         score = 60;
     }
 
-    cout << "Score de volume de compras = " << score << " pontos";
+    cout << "Score de volume de compras = " << score << " pontos" << endl;
 
 
+    int scoreP, scoreI;
 
+    if (tempoDePagamento > 1 || compras == 0) {
+
+        scoreI = 0;
+    }
+
+    else if (tempoDePagamento == 1 && compras >=1) {
+
+        scoreI = 15;
+    }
+
+    else if (tempoDePagamento == 0 && compras >=1) {
+
+        scoreI = 30;
+    }
+
+
+    if (compras >=1 && formaDePagamento == 'D') {
+
+        scoreP = 5;
+    }
+
+    else if (compras >=1 && formaDePagamento == 'C' || formaDePagamento == 'B') {
+
+        scoreP = 10;
+    }
+
+    cout << "Score de inadimplencia = " << scoreI << " pontos" << endl;
+    cout << "Score de pagamento = " << scoreP << " pontos" << endl;
     return 0;
 }
