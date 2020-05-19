@@ -16,5 +16,14 @@ int main()
     cin >> compras;
     cout << "Qual o ticket medio? ";
     cin >> ticket;
+
+
+    int tempoDePagamento;
+    char formaDePagamento;
+
+    cout << "Quantas vezes o cliente atrasou o pagamento? ";
+    cin >> tempoDePagamento;
+    cout << "A maioria das compras foi em dinheiro, cartao, ou boleto (D/C/B)? ";
+    cin >> formaDePagamento;
     return 0;
 }
